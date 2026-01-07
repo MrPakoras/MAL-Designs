@@ -1,0 +1,176 @@
+:root{
+  --main-col: #8d73ff;
+  --light-col: #d7ceff;
+  --accent-col: #5a49a4; 
+  /*  #ad87ff;*/
+  --dark-col: #000;
+}
+
+
+/* Background */
+
+body {
+	background-image: url("https://s8.gifyu.com/images/Ame-255410d9a8ed9b0902.gif") !important;
+	background-color: #1d1c2c !important;
+	background-position: right bottom;
+	background-size: 140% ;
+	background-attachment: fixed;
+}
+
+
+body.ownlist{
+  background-color: #000000;
+}
+
+/*Main text colour*/
+a{
+  color: var(--main-col) !important;
+}
+
+
+.list-table .list-table-data a:not(.edit-disabled):hover{
+  color: var(--accent-col) !important;
+}
+
+/* Transparent list body */
+
+@keyframes glow {
+ 0% { box-shadow: 0 0 30px 0px var(--light-col); }
+ 50% { box-shadow: 0 0 15px 0px var(--accent-col); }
+ 100% { box-shadow: 0 0 30px 0px var(--light-col); }
+}
+
+.list-container{
+  background: rgba(0,0,0,0.5) !important;
+  border-style: none !important;
+  animation: glow 2s infinite;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .list-container {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.status-menu-container{
+  background-color: transparent;
+  border: transparent;
+}
+
+/* Custom MAL logo */
+.header .header-title{
+  background-image: url(https://i.imgur.com/fucbLpn.png);
+  width: 480px;
+  height: 52px;
+  background-size: auto 60px;
+  background-position: left center;
+  top: 9px !important;
+}
+
+
+
+/* Anime status bar */
+.status-menu-container .status-menu .status-button.on{
+  color: var(--light-col) !important;
+}
+
+.status-menu-container .status-menu .status-button.on:after{
+  background-color: var(--accent-col);
+}
+
+.status-menu-container .status-menu .status-button{
+  color: var(--light-col) !important;
+}
+
+.status-menu-container .status-menu .status-button:after{
+  background-color: var(--accent-col);
+}
+
+#list-container > div.list-block > div > table > tbody:nth-child(1) > tr > th.header-title.tags, th.header-title.number{
+  color: #fff;
+}
+
+.list-table .list-table-data .tags .edit{
+  color: var(--accent-col) !important;
+}
+
+.list-table .list-table-data .tags .edit:hover{
+  color: var(--accent-col) !important;
+  filter: grayscale(30%);
+}
+
+/* Anime status bar when scrolled to a certain position */
+.status-menu-container.fixed{
+  background-image: linear-gradient(rgba(100,57,37, .5),transparent);
+  width: 100%;
+  left: 0px;
+}
+
+
+
+/* "ALL ANIME" bar */
+.list-unit .list-status-title{
+  background-color: var(--main-col);
+  visibility: collapse; /* its not really necessary, just takes up space*/
+}
+
+.list-unit .list-status-title .text{
+  color: #fff;
+}
+
+
+
+/* Table Header */
+.list-table .list-table-header .header-title{
+  background: var(--main-col);
+}
+
+
+.list-table .list-table-data .data a{
+  color: var(--light-col) !important;
+}
+
+.list-menu-float .icon-menu{
+  background-color: #121212 !important;
+}
+
+.list-menu-float .icon-menu svg.icon {
+  fill: var(--main-col);
+}
+
+.list-table .list-table-header .header-title .link.sort {
+  color: var(--main-col);
+}
+
+.list-table .list-table-header .header-title .link {
+  color: #fff !important;
+}
+
+
+
+/* Watch Episode button */
+.icon-watch2{
+  visibility: hidden;
+}
+
+.status-menu-container .search-container #search-button {
+  color: var(--main-col);
+}
+
+.loading-space{
+  display: none;
+}
+
+#footer-block{
+  background-color: var(--main-col);
+}
+
+#copyright{
+  color: #000000;
+}
+
+#copyright::after{
+  font-weight: bold;
+  content: "Theme created by u/MrPakoras";
+}
